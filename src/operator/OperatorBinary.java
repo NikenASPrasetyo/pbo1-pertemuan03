@@ -10,4 +10,14 @@ public class OperatorBinary {
     int jumlahSks = 24;
     double IPK = 3.98;
 
+    public static void main(String[] args) {
+        System.out.println(8+4);
+        System.out.println(8-4);
+        System.out.println(8*4);
+        System.out.println(8/4);
+        System.out.println(8%4);
+        System.out.println(8%2);
+
+    }
+
 }
