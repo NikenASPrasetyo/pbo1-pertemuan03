@@ -2,19 +2,30 @@ package percabangan;
 
 public class Switch {
     public static void main(String[] args) {
-        int makanan = 2;
-        switch(makanan){
-            case 1:
-                System.out.println("Ayam Goreng");
+        int bulan = 4;
+        int tahun = 2020;
+        int jumlahHari = 0;
+
+        switch (bulan) {
+            case 1: case 3: case 5:
+            case 7: case 8: case 10:
+            case 12:
+                jumlahHari = 31;
+                break;
+            case 4: case 6:
+            case 9: case 11:
+                jumlahHari = 30;
                 break;
             case 2:
-                System.out.println("Bubur Ayam");
+                if (tahun % 4 == 0)
+                    jumlahHari = 29;
+                else
+                    jumlahHari = 28;
                 break;
-            case 3:
-                System.out.println("Bakso");
+            default:
+                System.out.println("Maaf bulan hanya sampai 12.");
                 break;
-            case 4:
-                System.out.println("Ikan Bakar");
         }
+        System.out.println("Jumlah hari = " + jumlahHari);
     }
 }
